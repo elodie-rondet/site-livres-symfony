@@ -1,0 +1,56 @@
+.SignIn {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #cb959552;
+    margin-top: 5%;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+}
+
+.SignIn_Notification {
+    box-sizing: border-box;
+    margin-top: 30px;
+    width: 52%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.SignIn_Notification p {
+    background-color: #f9f3ee;
+    border: 2px solid #d9a963;
+    box-sizing: border-box;
+    padding: 20px 50px;
+    width: 100%;
+    margin: 0;
+}
+.SignIn_Notification.SignIn_Error p {
+    background-color: rgba(255,0,15,.24);
+    border-color: #d70000;
+}
+
+.SignIn_Form, .SignIn_Form label {
+    display: flex;
+    flex-direction: column;
+    font-family: DM Sans,sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.SignIn_Form input, .SignIn_Submit {
+    align-items: center;
+    display: flex;
+}
+
+.SignIn_Form input {
+    font-size: 16px;
+    height: 64px;
+    margin-bottom: 35px;
+}
+
+.SignIn_Submit span {
+    margin-inline: 20px;
+}
