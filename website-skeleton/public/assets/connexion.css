@@ -1,9 +1,17 @@
-.SignIn {
+.SignIn, .RegisterIn {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-color: #cb959552;
-    margin-top: 5%;
+    background-color: #f2e3ce;
+    margin-top: 2%;
+    padding-top: 50px;
+padding-bottom: 50px;
+}
+
+.RegisterIn {
+    margin: auto;
+    max-width: 1440px;
+    margin-top: 2%;
 }
 
 .container {
@@ -32,7 +40,7 @@
     border-color: #d70000;
 }
 
-.SignIn_Form, .SignIn_Form label {
+.SignIn_Form, .SignIn_Form label, .RegisterIn_Form, .RegisterIn_Form label {
     display: flex;
     flex-direction: column;
     font-family: DM Sans,sans-serif;
@@ -40,7 +48,14 @@
     line-height: 24px;
 }
 
-.SignIn_Form input, .SignIn_Submit {
+
+/* Inscription  */
+input#registration_form_email, input#registration_form_plainPassword {
+    height: 64px;
+    width: 350px;
+}
+
+.SignIn_Form input, .SignIn_Submit,.RegisterIn_Form input{
     align-items: center;
     display: flex;
 }
@@ -50,7 +65,23 @@
     height: 64px;
     margin-bottom: 35px;
 }
+.RegisterIn_Form input {
+    font-size: 16px;
+    height: 60px;
+    margin-bottom: 35px;
+}
+.RegisterIn_Form, .SignIn_Form {
+    padding-top:20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #f9f3ee;
+}
 
-.SignIn_Submit span {
+.RegisterIn {
+padding-top: 50px;
+padding-bottom: 50px;
+}
+
+.SignIn_Submit span, .RegisterIn_Submit span {
     margin-inline: 20px;
 }

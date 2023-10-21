@@ -1,0 +1,65 @@
+ 
+{% extends "base.html.twig" %}
+
+{% block title %}Ajouter un livre{% endblock %}
+
+{% block body %}
+  <div class="PageAjout_Form">
+	<div class="Ajout_Form">
+
+		<h1>Ajouter un livre</h1>
+
+		{{ form_start(form) }}
+
+		<div class="form-group">
+			{{ form_label(form.titre) }}
+			{{ form_widget(form.titre) }}
+			<div class="form-error">
+				{{ form_errors(form.titre) }}
+			</div>
+		</div>
+
+		<div class="form-group">
+			{{ form_label(form.auteur) }}
+			{{ form_widget(form.auteur) }}
+			<div class="form-error">
+				{{ form_errors(form.auteur) }}
+			</div>
+		</div>
+
+		<div class="form-group">
+			{{ form_label(form.date_edition) }}
+			{{ form_widget(form.date_edition) }}
+			<div class="form-error">
+				{{ form_errors(form.date_edition) }}
+			</div>
+		</div>
+
+		<div class="form-group">
+			{{ form_label(form.date_ajout) }}
+			{{ form_widget(form.date_ajout) }}
+			<div class="form-error">
+				{{ form_errors(form.date_ajout) }}
+			</div>
+		</div>
+
+		<div class="form-group">
+			{{ form_label(form.date_modification) }}
+			{{ form_widget(form.date_modification) }}
+			<div class="form-error">
+				{{ form_errors(form.date_modification) }}
+			</div>
+		</div>
+
+		{{ form_row(form.imageFile) }}
+		<div class="SignIn_Submit">
+            <button type="submit" class="btn btn-lg btn-primary">
+                <span>Ajouter le livre</span>
+            </button>
+        </div>
+
+
+		{{ form_end(form) }}
+	</div>
+</div>
+ {% endblock %}

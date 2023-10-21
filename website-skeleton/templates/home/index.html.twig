@@ -10,7 +10,16 @@
 <header>
 <h1>Nos Livres</h1>
 <p>à lire et à relire</p>
-<a class="button" href="/Ajouter">+ Ajouter un livre</a>
+{% for livre in livres %}
+  <div class="livres">
+   <img class="livre-accueil" src="{{ asset('imagesLivres/') ~ livre.imageName }}">
+   <div class="infos-livre">
+   <p>{{ recipe.titre }}</p>
+   <p>{{ recipe.auteur }}</p>
+   </div>
+  </div>
+{% endfor %}
+<a class="button" href="{{ path('ajoutLivre') }}">+ Ajouter un livre</a>
 </header>
 <section class="Home_bookList__KNB4N">
 </section>

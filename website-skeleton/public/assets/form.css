@@ -1,0 +1,29 @@
+
+
+
+.PageAjout_Form input{
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    height: 64px;
+    margin-bottom: 35px;
+}
+
+
+.PageAjout_Form{
+    padding-top:20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #f9f3ee;
+    margin: auto;
+}
+
+.Ajout_Form{
+    margin: auto;
+    width:30%;
+}
+
+.Ajout_Form input{
+    width:300px;
+    height:55px;
+}
