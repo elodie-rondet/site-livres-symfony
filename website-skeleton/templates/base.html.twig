@@ -22,20 +22,17 @@
         {% endblock %}
     </head>
     <script>
-    $(document).ready(function() {
-        $('.js-datepicker').datepicker({
-            format: 'yyyy-mm-dd'
-        });
-    });
-</script>
+    document.querySelector("div.label-img div label").style.display ="none";
+    </script>
     <header class="Header_Header__wwyjE">
 <div class="container"><img class="logo" src="{{ asset('images/logo.png') }}" alt="logo">
 <ul><li><a aria-current="page" class="Header_activeLink__-W+SD" href="{{ path('index') }}">Accueil</a>
 </li>
-<li><a href="{{ path('ajoutLivre') }}">Ajouter un livre</a></li>
     {% if app.user %}
+        <li><a href="{{ path('ajoutLivre') }}">Ajouter un livre</a></li>
         <li><a href="{{ path('app_logout') }}">Logout</a></li>
     {% else %}
+    <li><a href="{{ path('app_login') }}">Ajouter un livre</a></li>
         <li><a href="{{ path('app_login') }}">Se connecter</a></li></ul>
     {% endif %}
 

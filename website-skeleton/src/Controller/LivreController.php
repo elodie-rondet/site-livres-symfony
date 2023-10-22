@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Livres;
 use App\Form\AjoutLivreType;
+use App\Form\ModifLivreType;
 use App\Repository\LivresRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -61,17 +62,20 @@ class LivreController extends AbstractController
 
     }
 
-    #[Route('/edition/{id}', name: 'edit')]
-    public function edit(Livres $livre, Request $request, EntityManagerInterface $em): Response
+    
+    #[Route('/edition/{id}', name: 'edit', methods: ['GET','POST'])]
+    public function edit(LivresRepository $livres, Request $request, EntityManagerInterface $em, $id): Response
     {
+        //
+        $livre = $livres->find($id); 
         // On crée le formulaire
-        $livreForm = $this->createForm(AjoutLivreType::class, $livre);
+        $livreForm = $this->createForm(ModifLivreType::class, $livre);
 
         // On traite la requête du formulaire
         $livreForm->handleRequest($request);
 
         //On vérifie si le formulaire est soumis ET valide
-        if($livreForm->isSubmitted() && $livreForm->isValid()){  
+        if($livreForm->isSubmitted()){  
 
             // On stocke
             $em->persist($livre);
@@ -84,9 +88,9 @@ class LivreController extends AbstractController
         }
 
 
-        return $this->render('livres/edit.html.twig',[
-            'livreForm' => $livreForm->createView(),
-            'livre' => $livre
+        return $this->render('livres/modif.html.twig', [
+            'form' => $livreForm->createView(),
+            'livre' =>$livres->find($id)
         ]);
     }
 

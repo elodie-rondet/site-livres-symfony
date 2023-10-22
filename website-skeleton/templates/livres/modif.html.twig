@@ -1,21 +1,23 @@
  
 {% extends "base.html.twig" %}
 
-{% block title %}Ajouter un livre{% endblock %}
+{% block title %}Modifier le livre{% endblock %}
 
 {% block body %}
+ <script>
+    document.querySelector("div.label-img div label").style.display ="none";
+    </script>
   <div class="PageAjout_Form">
 	<div class="Ajout_Form">
 
-		<h1>Ajouter un livre</h1>
-        <p>Tous les champs sont obligatoires</p>
+		<h1>Modifier le livre</h1>
+        <p>Vous pouvez modifier tous les champs</p>
 
-        <div class="formAjoutLivre">
+        <div class="formModifLivre">
 		{{ form_start(form) }}
-
 		<div class="form-group">
 			{{ form_label(form.titre) }}
-			{{ form_widget(form.titre) }}
+            {{ form_widget(form.titre) }}
 			<div class="form-error">
 				{{ form_errors(form.titre) }}
 			</div>
@@ -57,7 +59,7 @@
         </div>
 		<div class="SignIn_Submit">
             <button type="submit" class="btn btn-lg btn-primary">
-                <span>Ajouter le livre</span>
+                <span>Publier</span>
             </button>
         </div>
 

@@ -78,7 +78,7 @@ p.auteur {
     padding-left: 20px;
 }
 
-p.dateEdition, p.dateAjout, p.dateModification {
+p.dateEdition, p.dateAjout, p.dateModification, p.auteur {
     justify-content: center;
 }
 
@@ -91,4 +91,19 @@ h2.titre {
     padding-left: 20px;
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+div.label-img div label {
+    display:none;
+}
+
+div.vich-image img {
+width:30%;
+margin-bottom: 10%;
+
+}
+div.vich-image {
+display: flex;
+    width: 80%;
+    align-items: center;
 }

@@ -11,11 +11,20 @@
 
 
 .PageAjout_Form{
-    padding-top:20px;
+    padding-top:100px;
     padding-left: 50px;
     padding-right: 50px;
     background-color: #f9f3ee;
     margin: auto;
+}
+
+.BookForm_AddImage {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 43px 81px;
+    border: dashed 1px #D9A963;
+    margin-bottom: 40px;
 }
 
 .Ajout_Form{
@@ -49,6 +58,29 @@ div.formAjoutLivre {
     margin-block: 50px;
 }
 
+div.formModifLivre  {
+margin-left: 27%;
+width: 70%;
+display: flex;
+flex-direction: column;
+font-family: "DM Sans", sans-serif;
+font-size: 18px;
+line-height: 24px;
+background-color: #F9F3EE;
+margin: auto;
+padding: 50px;
+align-items: center;
+margin-block: 50px;
+}
+div.formModifLivre form {
+    margin-left: 27%;
+}
+
 div.formAjoutLivre label {
     width:100%;
 }
+
+button#connexion, button#inscription {
+margin-top: 5%;
+}
+

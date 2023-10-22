@@ -10,7 +10,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 
-class AjoutLivreType extends AbstractType
+class ModifLivreType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
@@ -30,18 +30,18 @@ class AjoutLivreType extends AbstractType
                 'format' => 'yyyy-MM-dd',
             ])
             ->add('imageFile', VichImageType::class, [
-                'required' => false,
-                'allow_delete' => false,
-                'delete_label' => false,
-                'download_label' => false,
-                'download_uri' => false,
-                'image_uri' => true,
-                'asset_helper' => false,
-                'attr' => [
-                    'class' => 'image-add',
-                ]
-            ]);
-        ;
+                    'required' => false,
+                    'allow_delete' => false,
+                    'delete_label' => false,
+                    'download_label' => '',
+                    'download_uri' => false,
+                    'image_uri' => true,
+                    'asset_helper' => false,
+                    'attr' => [
+                        'class' => 'image-modif',
+                    ]
+                ]);
+        
     }
 
     public function configureOptions(OptionsResolver $resolver): void

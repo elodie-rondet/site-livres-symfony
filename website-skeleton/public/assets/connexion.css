@@ -38,6 +38,7 @@ padding-bottom: 50px;
 .SignIn_Notification.SignIn_Error p {
     background-color: rgba(255,0,15,.24);
     border-color: #d70000;
+    margin-bottom: 5%;
 }
 
 .SignIn_Form, .SignIn_Form label, .RegisterIn_Form, .RegisterIn_Form label {
@@ -50,7 +51,7 @@ padding-bottom: 50px;
 
 .RegisterIn_Form h1 {
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 
@@ -63,6 +64,10 @@ input#registration_form_email, input#registration_form_plainPassword {
 .SignIn_Form input, .SignIn_Submit,.RegisterIn_Form input{
     align-items: center;
     display: flex;
+}
+
+.SignIn_Submit {
+margin-top: -7%;
 }
 
 .SignIn_Form input {

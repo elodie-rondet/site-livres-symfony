@@ -26,11 +26,11 @@
             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"
     >
         <div class="SignIn_Submit">
-            <button type="submit" class="btn btn-lg btn-primary">
+            <button type="submit"  id="connexion" class="btn btn-lg btn-primary">
                 <span>Se connecter</span>
             </button>
             <span>OU</span>
-            <button type="submit" class="btn btn-lg btn-primary">
+            <button type="submit" id="inscription" class="btn btn-lg btn-primary">
                 <span><a href="{{ path('app_register') }}">S'inscrire</a></span>
             </button>
         </div>

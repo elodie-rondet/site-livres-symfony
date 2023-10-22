@@ -3,9 +3,6 @@
 {% block body %}
 {% if app.user %}
 <script>
-if (confirm) {
-    document.getElementById('suppression').setAttribute("href", "{{ path('delete', { id: livre.id }) }}");
-}
 </script>
 <main class="content">
     <div class="Home_Home__I4pYx">
@@ -18,16 +15,16 @@ if (confirm) {
                 <div class="infos-livre">
                     <div class="liens-modif-livre">
                     <p>
-                        <a href="">modifier</a> 
-                        <a href="{{ path('delete', { id: livre.id }) }}"><span id="suppression" tabindex="0" role="button">supprimer</span></a> 
+                        <a href="{{ path('edit', { id: livre.id }) }}">modifier</a> 
+                        <a href="{{ path('delete', { id: livre.id }) }}"><span id="suppression" tabindex="0" role="button" onclick="confirm('Voulez-vous vraiment supprimer ce livre ?')">supprimer</span></a> 
                     </p>
                 </div>
                 <div class="detail-livre">
                     <h2 class="titre">{{ livre.titre }}</h2>
                     <p class="auteur">{{ livre.auteur }}</p>
-                    <p class="dateEdition">{{ livre.dateEdition|date('d-m-Y') }}</p>
-                    <p class="dateAjout">{{ livre.dateAjout|date('d-m-Y') }}</p>
-                    <p class="dateModification">{{ livre.dateModification|date('d-m-Y') }}</p>
+                    <p class="dateEdition">Date d'édition: {{ livre.dateEdition|date('d/m/Y') }}</p>
+                    <p class="dateAjout">Date d'ajout: {{ livre.dateAjout|date('d/m/Y') }}</p>
+                    <p class="dateModification">Date de modification: {{ livre.dateModification|date('d/m/Y') }}</p>
                 </div>       
         </div>
     </section>

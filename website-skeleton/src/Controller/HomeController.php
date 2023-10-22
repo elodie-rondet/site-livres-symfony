@@ -28,4 +28,6 @@ class HomeController extends AbstractController
     {
         return $this->render('home/edit.html.twig', ['livre' =>$livre->find($id)]);
     }
+
+
 }
