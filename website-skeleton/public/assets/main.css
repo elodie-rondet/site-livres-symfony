@@ -85,3 +85,66 @@ ol, ul {
     font-size: 44px;
     font-style: italic;
 }
+
+.Home_bookList__KNB4N {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+
+h1 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 44px;
+    font-style: italic;
+    color: #796157;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+div.livres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+img.livre-accueil {
+    width: 206px;
+    height: 260px;
+    object-position: center;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+a.BookItem {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    max-width: 360px;
+    align-items: center;
+    margin-bottom: 65px;
+}
+
+section.BookItem {
+    display: flex;
+    align-items: center;
+}
+
+div.infos-livre {
+    display: flex;
+    flex: 3 3;
+    flex-direction: column;
+    margin-left: 18px;
+}
+
+div.infos-livre h2 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Libre Baskerville", serif;
+    margin-bottom: 0px;
+}
+div.infos-livre p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}

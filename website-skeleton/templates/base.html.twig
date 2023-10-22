@@ -7,6 +7,7 @@
         <link href="{{ asset('assets/main.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/connexion.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/form.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/livre.css') }}" rel="stylesheet">
         <link rel="icon" href="/favicon.ico">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="description" content="A compléter">
@@ -29,7 +30,7 @@
 </script>
     <header class="Header_Header__wwyjE">
 <div class="container"><img class="logo" src="{{ asset('images/logo.png') }}" alt="logo">
-<ul><li><a aria-current="page" class="Header_activeLink__-W+SD" href="{{ path('app_home') }}">Accueil</a>
+<ul><li><a aria-current="page" class="Header_activeLink__-W+SD" href="{{ path('index') }}">Accueil</a>
 </li>
 <li><a href="{{ path('ajoutLivre') }}">Ajouter un livre</a></li>
     {% if app.user %}

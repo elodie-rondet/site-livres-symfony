@@ -31,13 +31,13 @@ class Livres
     private ?string $auteur;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $date_edition;
+    private ?\DateTimeInterface $dateEdition;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $date_ajout;
+    private ?\DateTimeInterface $dateAjout;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $date_modification;
+    private ?\DateTimeInterface $dateModification;
 
     public function getId(): ?int
     {
@@ -70,36 +70,36 @@ class Livres
 
     public function getDateEdition(): ?\DateTimeInterface
     {
-        return $this->date_edition;
+        return $this->dateEdition;
     }
 
-    public function setDateEdition(\DateTimeInterface $date_edition): static
+    public function setDateEdition(\DateTimeInterface $dateEdition): static
     {
-        $this->date_edition = $date_edition;
+        $this->dateEdition = $dateEdition;
 
         return $this;
     }
 
     public function getDateAjout(): ?\DateTimeInterface
     {
-        return $this->date_ajout;
+        return $this->dateAjout;
     }
 
-    public function setDateAjout(\DateTimeInterface $date_ajout): static
+    public function setDateAjout(\DateTimeInterface $dateAjout): static
     {
-        $this->date_ajout = $date_ajout;
+        $this->dateAjout = $dateAjout;
 
         return $this;
     }
 
     public function getDateModification(): ?\DateTimeInterface
     {
-        return $this->date_modification;
+        return $this->dateModification;
     }
 
-    public function setDateModification(\DateTimeInterface $date_modification): static
+    public function setDateModification(\DateTimeInterface $dateModification): static
     {
-        $this->date_modification = $date_modification;
+        $this->dateModification = $dateModification;
 
         return $this;
     }

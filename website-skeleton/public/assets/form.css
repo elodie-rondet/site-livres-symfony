@@ -19,11 +19,36 @@
 }
 
 .Ajout_Form{
+    background-color: #FFFFFF;
     margin: auto;
-    width:30%;
+    border-radius: 7px;
+    box-shadow: 0 4px 34px rgba(0, 0, 0, 0.07);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 80px;
 }
 
 .Ajout_Form input{
-    width:300px;
+    width:450px;
     height:55px;
+}
+
+div.formAjoutLivre {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: #F9F3EE;
+    margin: auto;
+    padding: 50px;
+    align-items: center;
+    margin-block: 50px;
+}
+
+div.formAjoutLivre label {
+    width:100%;
 }

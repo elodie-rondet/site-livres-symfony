@@ -10,18 +10,28 @@
 <header>
 <h1>Nos Livres</h1>
 <p>à lire et à relire</p>
-{% for livre in livres %}
-  <div class="livres">
-   <img class="livre-accueil" src="{{ asset('imagesLivres/') ~ livre.imageName }}">
-   <div class="infos-livre">
-   <p>{{ recipe.titre }}</p>
-   <p>{{ recipe.auteur }}</p>
-   </div>
-  </div>
-{% endfor %}
+{% if app.user %}
 <a class="button" href="{{ path('ajoutLivre') }}">+ Ajouter un livre</a>
+{% endif %}
 </header>
 <section class="Home_bookList__KNB4N">
+{% for livre in livres %}
+  <div class="livres">
+    <section class="BookItem">
+      <a class="BookItem" href="{{ path('livre', { id: livre.id }) }}">
+          <img class="livre-accueil" src="{{ asset('imagesLivres/') ~ livre.imageName }}">
+          <div class="infos-livre">
+              <h2>{{ livre.titre }}</h2>
+              <p>{{ livre.auteur }}</p>
+              <p>{{ livre.dateEdition|date('d-m-Y') }}</p>
+              <p>{{ livre.dateAjout|date('d-m-Y') }}</p>
+              <p>{{ livre.dateModification|date('d-m-Y') }}</p>
+              
+          </div>
+      </a>
+    </section>
+  </div>
+{% endfor %}
 </section>
 </main>
 </div>

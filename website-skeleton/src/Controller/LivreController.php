@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Entity\Livres;
 use App\Form\AjoutLivreType;
 use App\Repository\LivresRepository;
-use App\Services\PictureService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -26,7 +25,7 @@ class LivreController extends AbstractController
             10
         );
         return $this->render('home/index.html.twig', [
-            'livres' => $livres,
+            'livres' => $livresRepository->findAll(),
         ]);
     }
 
@@ -65,7 +64,6 @@ class LivreController extends AbstractController
     #[Route('/edition/{id}', name: 'edit')]
     public function edit(Livres $livre, Request $request, EntityManagerInterface $em): Response
     {
-
         // On crée le formulaire
         $livreForm = $this->createForm(AjoutLivreType::class, $livre);
 
@@ -92,13 +90,20 @@ class LivreController extends AbstractController
         ]);
     }
 
-    #[Route('/suppression/{id}', name: 'delete')]
-    public function delete(Livres $livre): Response
+    #[Route('/suppression/{id}', name: 'delete', methods: ['GET'])]
+    public function delete(EntityManagerInterface $em, $id, LivresRepository $livres): Response
     {
-        // On vérifie si l'utilisateur peut supprimer avec le Voter
-        $this->denyAccessUnlessGranted('LIVRE_DELETE', $livre);
+        $livre = $livres->find($id);      
+        $em->remove($livre); 
+        $em->flush(); 
 
-        return $this->render('home/index.html.twig');
+        $this->addFlash(
+            'success',
+            'Le livre a été supprimé avec succès !'
+        );
+        return $this->render('home/index.html.twig', [
+            'livres' => $livres->findAll(),
+        ]);
     }
 
 }
