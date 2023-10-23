@@ -22,7 +22,7 @@
           <img class="livre-accueil" src="{{ asset('imagesLivres/') ~ livre.imageName }}">
           <div class="infos-livre">
               <h2>{{ livre.titre }}</h2>
-              <p>{{ livre.auteur }}</p>
+              <p>Auteur: {{ livre.auteur }}</p>
               <p>Date d'édition: {{ livre.dateEdition|date('d/m/Y') }}</p>
               <p>Date d'ajout: {{ livre.dateAjout|date('d/m/Y') }}</p>
               <p>Date de modification: {{ livre.dateModification|date('d/m/Y') }}</p>
