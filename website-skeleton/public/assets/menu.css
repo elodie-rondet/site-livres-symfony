@@ -1,0 +1,156 @@
+
+div.conteneur-mobile {
+    display: none;
+}
+@media (max-width: 768px) {
+
+    div.menu {
+    display: none;
+    }
+
+    .container {
+        display: grid;
+        overflow: hidden;
+        place-items: center;
+    }
+    
+    .btn-open {
+        border-radius: 8px;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+    
+    .btn {
+        align-items: center;
+        cursor: pointer;
+        display: block;
+        font-weight: 700;
+        height: 50px;
+        justify-content: center;
+        transition: all .15s ease-out;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    
+    div.menu-burger {
+        height: auto;
+        margin-left: 25%;
+        width: 100%;
+        display: block;
+        top: -55%;
+        position: relative;
+    }
+    
+    .btn-open span {
+        color: #fb641d;
+        display: block;
+        font-size: 40px;
+        font-weight: 700;
+        height: 10px;
+    }
+    
+    div#nav.nav.hide, .nav-link-opener {
+        display: none;
+    }
+    
+    .nav {
+        height: auto;
+        width: 70%;
+    }
+    
+    .nav {
+        background-color: #856363;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 30% auto;
+        grid-template-rows: var(--nav-height) 30% auto;
+        height: 200vw;
+        opacity: 1;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width:300px;
+    }
+
+    .hide {
+    display:none;
+    }
+
+    div.conteneur-mobile {
+        display: block;
+        z-index: 10000;
+    }
+    
+    .nav-header {
+        background-color: #464646;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .header_links {
+        font-size: 22px;
+        margin: 0 0 1rem 1rem!important;
+    }
+    
+    
+    img.close {
+        position: fixed;
+        z-index: 10000;
+        left: 15%;
+        top: 3%;
+    }
+
+
+    ul.nav-links li a {
+
+    color: white;
+    padding: 5px;
+    padding-bottom: 15px;
+    display: block;
+    margin-top: 15%;
+    }
+    ul.nav-links {
+        -webkit-animation: letters 0s ease .5s forwards;
+        animation: letters 0s ease .5s forwards;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(10,50px);
+        grid-template-rows: repeat(var(--nav-count),var(--nav-height));
+        list-style-type: none;
+        overflow: hidden;
+        position: fixed;
+        right: 45%;
+    }
+
+    .container {
+        width: 90%;
+    }
+    .RegisterIn_Form, .SignIn_Form {
+        padding-left: 10px;
+        width: 75%;
+    }
+    .SignIn_Form input, .SignIn_Submit, .RegisterIn_Form input {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .SignIn_Notification {
+        width: 90%;
+    }
+    .Home_banner__VCUR8 {
+        background-image: url(./../images/banniere.jpg);
+        /* background-position: 0%; */
+        background-repeat: repeat;
+        background-size: contain;
+        height: 500px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+    }
+    
+ }

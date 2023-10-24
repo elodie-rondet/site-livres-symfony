@@ -166,3 +166,39 @@ div.infos-livre p {
 a.button {
 margin-bottom: 0px;
 }
+
+@media (max-width: 768px) {
+
+.Home_banner__VCUR8 {
+    background-image: url(./../images/banniere.jpg);
+    /* background-position: 0%; */
+    background-repeat: repeat;
+    background-size: contain;
+    height: 500px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+a.BookItem {
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 34px;
+}
+.PageAjout_Form {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.PageAjout_Form input {
+    width: 250px;
+}
+div.formAjoutLivre {
+    width: 60%;
+}
+
+}
+

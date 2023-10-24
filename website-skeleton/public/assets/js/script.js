@@ -16,3 +16,9 @@ function previewPicture(e) {
 
 
     
+
+  function affichageMobile () {
+    var affiche = document.getElementById("close");
+    affiche.style = affiche.style ? "visible" : "none";
+
+  }

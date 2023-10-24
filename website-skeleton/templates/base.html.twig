@@ -8,6 +8,7 @@
         <link href="{{ asset('assets/connexion.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/form.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/livre.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/menu.css') }}" rel="stylesheet">
         <link rel="icon" href="/favicon.ico">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="description" content="A compléter">
@@ -16,26 +17,66 @@
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
     </head>
     <script>
-    document.querySelector("div.label-img div label").style.display ="none";
+    document.querySelector("div.label-img div label").style.display ="none"; 
+    document.querySelector("div#nav.nav").style.display = "none";
+    function affichageMobile () {
+    document.getElementById('nav').className = "nav";
+    }
+
+    function hide() {
+       document.getElementById('nav').className = "nav hide";
+    }
+
+    
+    
     </script>
     <header class="Header_Header__wwyjE">
-<div class="container"><img class="logo" src="{{ asset('images/logo.png') }}" alt="logo">
-<ul><li><a aria-current="page" class="Header_activeLink__-W+SD" href="{{ path('index') }}">Accueil</a>
-</li>
-    {% if app.user %}
-        <li><a href="{{ path('ajoutLivre') }}">Ajouter un livre</a></li>
-        <li><a href="{{ path('app_logout') }}">Logout</a></li>
-    {% else %}
-    <li><a href="{{ path('app_login') }}">Ajouter un livre</a></li>
-        <li><a href="{{ path('app_login') }}">Se connecter</a></li></ul>
-    {% endif %}
-
+<div class="container">
+    <img class="logo" src="{{ asset('images/logo.png') }}" alt="logo">
+    <div class="menu">
+    <ul>
+        <li><a aria-current="page" class="Header_activeLink__-W+SD" href="{{ path('index') }}">Accueil</a>
+        </li>
+        {% if app.user %}
+            <li><a href="{{ path('ajoutLivre') }}">Ajouter un livre</a></li>
+            <li><a href="{{ path('app_logout') }}">Logout</a></li>
+        {% else %}
+        <li><a href="{{ path('app_login') }}">Ajouter un livre</a></li>
+        <li><a href="{{ path('app_login') }}">Se connecter</a></li>
+    </ul>
+    </div>
+        {% endif %}
+</div>
+<div id="conteneur-mobile" class="conteneur-mobile">
+	<label class="btn btn-open" for="nav" onclick="affichageMobile()">
+		<div class="menu-burger">
+			<span>__</span>
+			<span>__</span>
+			<span>__</span>
+		</div>
+	</label>
+	<div id="nav" class="nav hide">
+		<div class="nav-header">
+			<img id="close" class="close" src="{{ asset('images/fermeture.webp') }}" alt="" onclick="hide()">
+		</div>
+	    <nav>
+	    	<ul class="nav-links">
+	    	<label class="btn btn-nav" for="nav">
+	    	</label>
+	    	<li><a aria-current="page" class="Header_activeLink__-W+SD" href="{{ path('index') }}" onclick="hide()">Accueil</a>
+	    	</li>
+	    	{% if app.user %}
+	    		<li><a href="{{ path('ajoutLivre') }}" onclick="hide()">Ajouter un livre</a></li>
+	    		<li><a href="{{ path('app_logout') }}" onclick="hide()">Logout</a></li>
+	    	{% else %}
+	    	<li><a href="{{ path('app_login') }}" onclick="hide()">Ajouter un livre</a></li>
+	    	<li><a href="{{ path('app_login') }}" onclick="hide()">Se connecter</a></li></ul>
+	    	{% endif %}
+	    	</ul>
+	    </nav>
+	</div>
 </div>
 </header>
     <body>

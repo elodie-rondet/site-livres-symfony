@@ -107,3 +107,49 @@ display: flex;
     width: 80%;
     align-items: center;
 }
+@media (max-width: 768px) {
+div.BookDetail {
+    flex-direction: column;
+}
+
+div.conteneur-img {
+    margin-right: 80px;
+    width: calc(100% - 80px);
+    background-position: center;
+    background-size: contain;
+    margin: auto;
+}
+
+div.BookDetail {
+    padding-block: 0em;
+}
+
+div.infos-livre {
+    margin: auto;
+    width: 70%;
+}
+
+div#PageModif_Form, div#PageAjout_Form {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+input#modif_livre_titre,input#modif_livre_auteur,input#modif_livre_date_edition, 
+input#modif_livre_date_ajout, input#modif_livre_date_modification, 
+input#ajout_livre_titre,input#ajout_livre_auteur,input#ajout_livre_date_edition, 
+input#ajout_livre_date_ajout, input#ajout_livre_date_modification,div.formModifLivre form, div.formAjoutLivre form {
+    width: 230px;
+    margin-left: 0%;
+}
+div.formModifLivre, div.formAjoutLivre{
+    width: 60%;
+    margin-block: 0px;
+}
+.SignIn_Submit span, .RegisterIn_Submit span {
+    margin-inline: 0px;
+}
+.PageAjout_Form {
+    padding-top: 50px;
+}
+
+}
